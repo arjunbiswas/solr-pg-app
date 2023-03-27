@@ -16,6 +16,8 @@ https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
 ## Create database
 ```
+Log into postgres database and create database with command
+
 CREATE DATABASE predictspring; 
 ```
 ## All Services
