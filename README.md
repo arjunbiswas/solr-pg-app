@@ -1,17 +1,45 @@
 # Simple Solr Query Service
 Simple solr app with postgres
 
+# Infra Service
+
+## Run solr 
+```
+docker run -d -p 8983:8983 --name apache_solr5 solr solr-precreate ex_core5
+```
+
+## Download and Run postgres 
+```
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
+[No username or password is used from the application to connect ]
+```
+
+## Create database
+```
+CREATE DATABASE predictspring; 
+```
+## All Services
+
+## Package all Services
+```
+From root of app folder
+mvn -pl indexer,ingester,query package
+```
+
+
 # Ingester Service
 
 ## Build the project
 
 ```
-mvn clean install -DskipTests=true
+cd ingester
+mvn clean install 
 ```
 
 ## Run the application
 
 ```
+cd ingester
 mvn spring-boot:run
 ```
 
@@ -63,6 +91,7 @@ entire tsv file
 
 ## Run the application
 ```
+cd indexer
 mvn spring-boot:run
 ```
 
@@ -70,6 +99,7 @@ mvn spring-boot:run
 
 ## Run the application
 ```
+cd query
 mvn spring-boot:run
 ```
 Request
