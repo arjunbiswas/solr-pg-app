@@ -46,6 +46,11 @@ mvn spring-boot:run
 ```
 
 ## Sample POST request to upload a file
+Sample Data
+```
+data/Product_feed.tsv
+```
+
 Request
 ```
 curl -XPOST http://localhost:8080/v1/upload -F file=@Product_feed.tsv
