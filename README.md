@@ -1,6 +1,23 @@
 # Simple Solr Query Service
 Simple solr app with postgres
 
+# Infra Service
+## Run solr 
+```
+docker run -d -p 8983:8983 --name apache_solr5 solr solr-precreate ex_core5
+```
+
+## Download and Run postgres 
+```
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
+[No username and password set]
+```
+
+## Create database
+```
+CREATE DATABASE predictspring; 
+```
+
 # Ingester Service
 
 ## Build the project
