@@ -11,7 +11,7 @@ docker run -d -p 8983:8983 --name apache_solr5 solr solr-precreate ex_core5
 ## Download and Run postgres 
 ```
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
-[No username and password set]
+[No username or password is used from the application to connect ]
 ```
 
 ## Create database
@@ -22,6 +22,7 @@ CREATE DATABASE predictspring;
 
 ## Package all Services
 ```
+From root of app folder
 mvn -pl indexer,ingester,query package
 ```
 
