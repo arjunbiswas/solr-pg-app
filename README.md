@@ -1,7 +1,7 @@
 # Simple Solr Query Service
 Simple solr app with postgres
 
-# Infra Service
+# Infra Services
 
 ## Run solr 
 ```
@@ -20,9 +20,9 @@ Log into postgres database and create database with command
 
 CREATE DATABASE predictspring; 
 ```
-## All Services
+## Application Services
 
-## Package all Services
+## Package all Application Services
 ```
 From root of app folder
 mvn -pl indexer,ingester,query package
