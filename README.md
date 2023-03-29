@@ -20,7 +20,7 @@ Log into postgres database and create database with command
 
 CREATE DATABASE predictspring; 
 ```
-## Application Services
+# Application Services
 
 ## Package all Application Services
 ```
