@@ -29,16 +29,16 @@ mvn -pl indexer,ingester,query package
 ```
 
 
-# Ingester Service
+## Ingester Service
 
-## Build the project
+### Build the project
 
 ```
 cd ingester
 mvn clean install 
 ```
 
-## Run the application
+### Run the application
 
 ```
 cd ingester
@@ -66,7 +66,7 @@ Response
 }
 ```
 
-## Sample GET request a file info with file id
+### Sample GET request a file info with file id
 
 Request
 ```
@@ -83,7 +83,7 @@ Response
 }
 ```
 
-## Sample GET request to fetch file contents file {id}
+### Sample GET request to fetch file contents file {id}
 
 Request
 ```
@@ -94,9 +94,9 @@ Response
 entire tsv file
 ```
 
-# Indexer Service
+## Indexer Service
 
-## Run the application
+### Run the application
 ```
 cd indexer
 mvn spring-boot:run
