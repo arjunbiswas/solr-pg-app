@@ -1,5 +1,5 @@
 # Simple Solr Query Service
-Simple solr app with postgres
+Simple solr querying app with some data and postgres
 
 # Infra Services
 
