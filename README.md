@@ -45,7 +45,7 @@ cd ingester
 mvn spring-boot:run
 ```
 
-## Sample POST request to upload a file
+### Sample POST request to upload a file
 Sample Data
 ```
 data/Product_feed.tsv
