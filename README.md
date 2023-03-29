@@ -102,7 +102,7 @@ cd indexer
 mvn spring-boot:run
 ```
 
-# Query Service
+## Query Service
 
 ## Run the application
 ```
