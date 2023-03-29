@@ -104,7 +104,7 @@ mvn spring-boot:run
 
 ## Query Service
 
-## Run the application
+### Run the application
 ```
 cd query
 mvn spring-boot:run
