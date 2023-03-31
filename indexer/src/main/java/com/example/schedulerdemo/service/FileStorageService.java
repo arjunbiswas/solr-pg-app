@@ -49,7 +49,7 @@ public class FileStorageService {
     public List<PredictSpringFile> getAllNonIndexedFiles() {
         List<PredictSpringFile> nonIndexedFilesList = new ArrayList<>();
         List<Object[]> nonIndexedFilesListDBResponse = fileDBRepository.getPredictSpringFileIdandName();
-        for(Object[] record : nonIndexedFilesListDBResponse) {
+        for (Object[] record : nonIndexedFilesListDBResponse) {
             PredictSpringFile ps = new PredictSpringFile();
             ps.setId((String) record[0]);
             ps.setName((String) record[1]);

@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface FileDBRepository extends JpaRepository<PredictSpringFile, String> {
 
-    @Query(value = "select ps.id, ps.name from predictspring ps where ps.indexed != true",nativeQuery = true)
+    @Query(value = "select ps.id, ps.name from predictspring ps where ps.indexed != true", nativeQuery = true)
     List<Object[]> getPredictSpringFileIdandName();
 
 }

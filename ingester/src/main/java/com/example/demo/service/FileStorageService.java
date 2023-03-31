@@ -24,7 +24,7 @@ public class FileStorageService {
 
     public PredictSpringFile store(MultipartFile file) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        PredictSpringFile FileDB = new PredictSpringFile(fileName, Timestamp.from(ZonedDateTime.now().toInstant()),file.getContentType(), file.getBytes());
+        PredictSpringFile FileDB = new PredictSpringFile(fileName, Timestamp.from(ZonedDateTime.now().toInstant()), file.getContentType(), file.getBytes());
         return fileDBRepository.save(FileDB);
     }
 

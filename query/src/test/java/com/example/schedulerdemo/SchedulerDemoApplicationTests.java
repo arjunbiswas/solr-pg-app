@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class SchedulerDemoApplicationTests {
 
-	public void contextLoads() {
-	}
+    public void contextLoads() {
+    }
 
 }

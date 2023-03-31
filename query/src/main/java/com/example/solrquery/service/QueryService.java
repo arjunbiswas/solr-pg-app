@@ -25,7 +25,8 @@ public class QueryService {
     public SolrDocumentList search(String jsonString) throws IOException, SolrServerException {
         SolrQuery query = new SolrQuery();
         query.setQuery("*:*");
-        HashMap<String,String> map = new Gson().fromJson(jsonString, new TypeToken<HashMap<String, String>>(){}.getType());
+        HashMap<String, String> map = new Gson().fromJson(jsonString, new TypeToken<HashMap<String, String>>() {
+        }.getType());
         for (Map.Entry<String, String> entry : map.entrySet()) {
             if (entry.getKey().equalsIgnoreCase("fulltext")) {
                 query.setQuery(entry.getValue());

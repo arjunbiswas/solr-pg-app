@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ConfigurationProperties(prefix="solrj")
+@ConfigurationProperties(prefix = "solrj")
 public class SolrjClient {
 
     private String url;

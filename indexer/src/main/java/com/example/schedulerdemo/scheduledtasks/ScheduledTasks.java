@@ -24,7 +24,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-@ConfigurationProperties(prefix="solrj")
+@ConfigurationProperties(prefix = "solrj")
 public class ScheduledTasks {
 
     @Value("${solrj.batchSize}")
@@ -142,7 +142,6 @@ public class ScheduledTasks {
      */
     private SolrPredictSpringDocument getSolrInputDocument(String line, String[] columns) {
         SolrPredictSpringDocument solrPredictSpringDocument = new SolrPredictSpringDocument();
-
 
 
         String[] tokens = line.split(REGEX_TAB_DELIMITER);

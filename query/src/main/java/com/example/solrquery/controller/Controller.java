@@ -23,14 +23,14 @@ public class Controller {
 
     private AtomicLong requestCount = new AtomicLong();
 
-    @RequestMapping(value = "v1/query", method = RequestMethod.POST, consumes="application/json")
+    @RequestMapping(value = "v1/query", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<SolrDocumentList> searchWithQuery(@RequestBody String jsonNode) {
         SolrDocumentList solrDocuments = null;
         try {
             solrDocuments = queryService.search(jsonNode);
             requestCount.addAndGet(1);
-            log.info("server requestCount-" + requestCount +  ", resultset size : --> " + solrDocuments.size() + ", query : --> " + jsonNode);
-            return  ResponseEntity
+            log.info("server requestCount-" + requestCount + ", resultset size : --> " + solrDocuments.size() + ", query : --> " + jsonNode);
+            return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(solrDocuments);
         } catch (JsonProcessingException e) {
