@@ -29,7 +29,7 @@ public class Controller {
         try {
             solrDocuments = queryService.search(jsonNode);
             requestCount.addAndGet(1);
-            log.info("server requestCount-" + requestCount +  "RS : -->" + solrDocuments.size());
+            log.info("server requestCount-" + requestCount +  ", resultset size : --> " + solrDocuments.size() + ", query : --> " + jsonNode);
             return  ResponseEntity
                     .status(HttpStatus.OK)
                     .body(solrDocuments);

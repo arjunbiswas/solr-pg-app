@@ -38,14 +38,14 @@ public class ScheduledTasks {
 
     public static final String REGEX_TAB_DELIMITER = "\t";
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 600000)
     public void indexLatestPredictSpringFiles() throws IOException {
         log.info("Fetching latest files ");
         List<PredictSpringFile> nonIndexedFiles = storageService.getAllNonIndexedFiles();
         for (PredictSpringFile predictSpringFile : nonIndexedFiles) {
             PredictSpringFile fileForIndexing = storageService.getFileForIndexing(predictSpringFile.getId());
             log.info("Caching latest file ");
-            File cacheFile = new File(System.getProperty("user.dir") + "/indexing-queue/" + fileForIndexing.getId());
+            File cacheFile = new File(System.getProperty("user.dir") + "/indexer/indexing-queue/" + fileForIndexing.getId());
             if (cacheFileLocallyForStreaminRead(fileForIndexing, cacheFile)) {
                 try {
                     processFile(cacheFile);
@@ -142,6 +142,9 @@ public class ScheduledTasks {
      */
     private SolrPredictSpringDocument getSolrInputDocument(String line, String[] columns) {
         SolrPredictSpringDocument solrPredictSpringDocument = new SolrPredictSpringDocument();
+
+
+
         String[] tokens = line.split(REGEX_TAB_DELIMITER);
         solrPredictSpringDocument.setSku_id(tokens[0]);
         solrPredictSpringDocument.setImage(tokens[1]);
@@ -151,7 +154,7 @@ public class ScheduledTasks {
         solrPredictSpringDocument.setColor(tokens[5]);
         solrPredictSpringDocument.setColor_code(tokens[6]);
         solrPredictSpringDocument.setColor_family(tokens[7]);
-        //solrPredictSpringDocument.setSize(tokens[8]);
+        solrPredictSpringDocument.setSize(tokens[8]);
         solrPredictSpringDocument.setSize_id(tokens[9]);
         solrPredictSpringDocument.setDepartment_id(tokens[10]);
         solrPredictSpringDocument.setDissection_code(tokens[11]);

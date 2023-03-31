@@ -1,0 +1,301 @@
+curl -X POST -H 'Content-type:application/json' --data-binary '{
+  "add-field": [
+    {
+      "name": "sku_id",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "image",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "additional_image_link",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true
+    },
+    {
+      "name": "style_id",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true
+    },
+    {
+      "name": "class_id",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "color_code",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "color_family",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "size_id",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "department_id",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "dissection-code",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "hazmat",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "redline",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "promoted",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "tax_code",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "vendor",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "list_price",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "sale_price",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+
+    {
+      "name": "sale_price_effective_date",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "omitNorms": true,
+      "omitTermFreqAndPositions": true,
+      "docValues": true,
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "shoprunner_eligible",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "prod_description",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "start_date",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "featured_color",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "featured_color_category",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "related_products",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "pre_order",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "handling_code",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "video",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "proportion",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "proportion_products",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "master_style",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+
+    {
+      "name": "cannot_return",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+
+    {
+      "name": "great_find",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "web_exclusive",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "ny_deals",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "promo_tagline",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "partially_promoted",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "product_category",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "sort_order",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "quantity_sold",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    },
+    {
+      "name": "average_rating",
+      "type": "string",
+      "indexed": true,
+      "stored": true
+    }
+  ]
+}' http://localhost:8983/solr/demo/schema

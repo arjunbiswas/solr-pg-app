@@ -27,8 +27,15 @@ public class QueryService {
         query.setQuery("*:*");
         HashMap<String,String> map = new Gson().fromJson(jsonString, new TypeToken<HashMap<String, String>>(){}.getType());
         for (Map.Entry<String, String> entry : map.entrySet()) {
-            String solrQueryTerm = entry.getKey() + ":" + entry.getValue();
-            query.addFilterQuery(solrQueryTerm);
+            if (entry.getKey().equalsIgnoreCase("fulltext")) {
+                query.setQuery(entry.getValue());
+                break;
+            } else {
+                String solrQueryTerm = entry.getKey() + ":" + entry.getValue();
+                query.addFilterQuery(solrQueryTerm);
+                query.setStart(0);
+                query.setRows(20);
+            }
         }
 
         QueryResponse response = solrjClient.getSolrjClient().query(query);
