@@ -1,63 +1,61 @@
 # Simple Solr Query Service
+Simple solr querying app with some data and postgres
 
-Simple solr app with postgres
+# Infra Services
 
-# Infra Service
-
-## Run solr
-
+## Run solr 
 ```
 docker run -d -p 8983:8983 --name apache_solr5 solr solr-precreate ex_core5
 ```
 
-## Download and Run postgres
-
+## Download and Run postgres 
 ```
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
 [No username or password is used from the application to connect ]
 ```
 
 ## Create database
-
 ```
+Log into postgres database and create database with command
+
 CREATE DATABASE predictspring; 
 ```
+# Application Services
 
-## All Services
-
-## Package all Services
-
+## Package all Application Services
 ```
 From root of app folder
 mvn -pl indexer,ingester,query package
 ```
 
-# Ingester Service
 
-## Build the project
+## Ingester Service
+
+### Build the project
 
 ```
 cd ingester
 mvn clean install 
 ```
 
-## Run the application
+### Run the application
 
 ```
 cd ingester
 mvn spring-boot:run
 ```
 
-## Sample POST request to upload a file
+### Sample POST request to upload a file
+Sample Data
+```
+data/Product_feed.tsv
+```
 
 Request
-
 ```
 curl -XPOST http://localhost:8080/v1/upload -F file=@Product_feed.tsv
 ```
-
 Response
-
 ```
 {
   "message" : "Uploaded the file successfully: Product_feed.tsv",
@@ -68,16 +66,13 @@ Response
 }
 ```
 
-## Sample GET request a file info with file id
+### Sample GET request a file info with file id
 
 Request
-
 ```
 curl -XGET http://localhost:8080/v1/files/059484a0-b3d6-4c5a-83b4-d859cd42e5ca
 ```
-
 Response
-
 ```
 {
   "id": "059484a0-b3d6-4c5a-83b4-d859cd42e5ca",
@@ -88,46 +83,37 @@ Response
 }
 ```
 
-## Sample GET request to fetch file contents file {id}
+### Sample GET request to fetch file contents file {id}
 
 Request
-
 ```
 curl -XGET http://localhost:8080/v1/files/059484a0-b3d6-4c5a-83b4-d859cd42e5ca?data=true
 ```
-
 Response
-
 ```
 entire tsv file
 ```
 
-# Indexer Service
+## Indexer Service
 
-## Run the application
-
+### Run the application
 ```
 cd indexer
 mvn spring-boot:run
 ```
 
-# Query Service
+## Query Service
 
-## Run the application
-
+### Run the application
 ```
 cd query
 mvn spring-boot:run
 ```
-
 Request
-
 ```
 curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER", "size_id":"0","quantity_sold":"0","department_id":"55", "title": "7th Aue Bootcut Pant - Tall"}'
 ```
-
 Response
-
 ```
 [ {
   "sku_id" : 55631440,
