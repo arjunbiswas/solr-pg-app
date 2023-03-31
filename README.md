@@ -5,7 +5,7 @@ Simple solr querying app with some data and postgres
 
 ## Run solr 
 ```
-docker run -d -p 8983:8983 --name apache_solr5 solr solr-precreate ex_core5
+docker run -d -p 8983:8983 --name demo_solar solr solr-precreate demo
 ```
 
 ## Download and Run postgres 
@@ -60,9 +60,9 @@ Response
 {
   "message" : "Uploaded the file successfully: Product_feed.tsv",
   "fileName" : "Product_feed.tsv",
-  "downloadUri" : "/v1/files/401798af-1b13-4d6f-baa2-15d9387ec3da",
+  "downloadUri" : "/v1/files/e16f0daf-75b1-48a5-bbc1-af1a47e8a6ed",
   "size" : 81273316,
-  "fileReceivedTimeStamp" : "2023-03-27T10:54:06.569+00:00"
+  "fileReceivedTimeStamp" : "2023-03-31T23:50:36.650+00:00"
 }
 ```
 
@@ -70,14 +70,14 @@ Response
 
 Request
 ```
-curl -XGET http://localhost:8080/v1/files/059484a0-b3d6-4c5a-83b4-d859cd42e5ca
+curl -XGET http://localhost:8080/v1/files/e16f0daf-75b1-48a5-bbc1-af1a47e8a6ed
 ```
 Response
 ```
 {
-  "id": "059484a0-b3d6-4c5a-83b4-d859cd42e5ca",
+  "id": "e16f0daf-75b1-48a5-bbc1-af1a47e8a6ed",
   "indexed": false,
-  "timestamp": "Mar 27, 2023 3:49:42 AM",
+  "timestamp": "Mar 31, 2023 4:50:36 PM",
   "name": "Product_feed.tsv",
   "type": "application/octet-stream"
 }
