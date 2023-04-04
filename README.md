@@ -53,7 +53,7 @@ data/Product_feed.tsv
 
 Request
 ```
-curl -XPOST http://localhost:8080/v1/upload -F file=@Product_feed.tsv
+curl -XPOST http://localhost:8080/v1/upload -F file=@data/Product_feed.tsv
 ```
 Response
 ```
@@ -153,19 +153,19 @@ Response
 Sample Queries
 ```
 ```
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"size":"12","color":"GREY STUNNER"}' && echo "done1" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER", "size_id":"0","department_id":"55", "title": "7th Aue Bootcut Pant - Tall"}' && echo "done" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER", "size_id":"0","department_id":"55"}' && echo "done" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER","sku_id":"55609029"}' && echo "done" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609029"}' && echo "done" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"size":"12"}' && echo "done2" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER"}' && echo "done3" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"RINSE"}' && echo "done4" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"handling_code":"F2ABUL13"}' && echo "done4" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"title":"7th Avenue Bootcut Pant - Tall"}' && echo "done4" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"redline":"TRUE","color":"GREY STUNNER"}' && echo "done6" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","color":"GREY STUNNER"}' && echo "done7" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","color":"GREYISH"}' && echo "done7" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","handling_code":"F2ABUL13"}' && echo "done9" &
-  #curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"handling_code":"XXXXXX"}' && echo "done9" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"size":"12","color":"GREY STUNNER"}' && echo "done1" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER", "size_id":"0","department_id":"55", "title": "7th Aue Bootcut Pant - Tall"}' && echo "done" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER", "size_id":"0","department_id":"55"}' && echo "done" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER","sku_id":"55609029"}' && echo "done" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609029"}' && echo "done" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"size":"12"}' && echo "done2" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"GREY STUNNER"}' && echo "done3" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"color":"RINSE"}' && echo "done4" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"handling_code":"F2ABUL13"}' && echo "done4" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"title":"7th Avenue Bootcut Pant - Tall"}' && echo "done4" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"redline":"TRUE","color":"GREY STUNNER"}' && echo "done6" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","color":"GREY STUNNER"}' && echo "done7" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","color":"GREYISH"}' && echo "done7" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"sku_id":"55609032","handling_code":"F2ABUL13"}' && echo "done9" &
+  # curl -XPOST -H "Content-Type: application/json" http://localhost:8082/v1/query -d '{"handling_code":"XXXXXX"}' && echo "done9" &
 ```
